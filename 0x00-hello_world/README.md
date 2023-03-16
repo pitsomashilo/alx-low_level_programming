@@ -13,3 +13,6 @@ The program puts.c prints the string \"Programming us like building a multilingu
 5-printf.c is a C program that prints exactly \"with proper grammer, but the outcome is a piece of art,\" followed by a newline
 
 6-size.c is a C program that prints the size of various types on the computer it is compiled and run on
+
+Advanced Tasks
+Script 100-intel generates the assembly code using Intel Syntax of a C program and saves it in an output file
