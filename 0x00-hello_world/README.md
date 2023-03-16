@@ -5,3 +5,5 @@ Script 0-preprocessor runs a C file through the preprocessor and saves the resul
 Script 1-compiler compiles a C file but does not link
 
 Script 2-assembler generates the assembly code of a C program and saves it in an output file
+
+Script 3-name compiles a C file and creates an executable named cisfun
