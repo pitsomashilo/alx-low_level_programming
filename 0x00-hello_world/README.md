@@ -7,3 +7,5 @@ Script 1-compiler compiles a C file but does not link
 Script 2-assembler generates the assembly code of a C program and saves it in an output file
 
 Script 3-name compiles a C file and creates an executable named cisfun
+
+The program puts.c prints the string \"Programming us like building a multilingual puzzle\" followed by a new line
