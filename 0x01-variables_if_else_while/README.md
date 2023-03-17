@@ -13,3 +13,5 @@ The program 4-print_alphabt.c prints the alphabet in lowercase, except for the l
 The program 5-print_numbers.c prints all single digit numbers of base 10 starting from 0, followed by a newline
 
 The program 6-print_numberz.c prints all single digit numbers of base 10 starting from 0, followed by a new line
+
+The program 7-print_tebahpla.c prints the lowercase alphabet in reverse, followed by a new line, using putchar.
