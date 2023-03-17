@@ -22,15 +22,15 @@ int main(void)
 
 	if (last_dig != 0 && last_dig < 6)
 	{
-		printf("%s %ld is %d and is less than 6 and not 0\n", str, n, last_dig);
+		printf("%s %d is %d and is less than 6 and not 0\n", str, n, last_dig);
 	}
 	else if (last_dig == 0)
 	{
-		printf("%s %ld is %d and is 0\n", str, n, last_dig);
+		printf("%s %d is %d and is 0\n", str, n, last_dig);
 	}
-	else if (last_digit > 5)
+	else if (last_dig > 5)
 	{
-		printf("%s %ld is %d and is greater than 5\n", str, n, last_dig);
+		printf("%s %d is %d and is greater than 5\n", str, n, last_dig);
 	}
 	return (0);
 }
