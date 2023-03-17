@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	char a = 48;
-	char space = '\n';
+	int a = 48;
+	int space = 10;
 
 	while (a < 58)
 	{
