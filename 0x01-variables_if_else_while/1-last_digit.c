@@ -12,20 +12,20 @@
  */
 int main(void)
 {
-	
 	int y = 10;
 	char str[] = "Last digit of";
-	int n; 
+	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
 	if (n % y != 0 && n % y < 6)
 	{
-		printf("%s %d is %d and is less than 6 and not 0\n", str, n, (n %y));
+		printf("%s %d is %d and is less than 6 and not 0\n", str, n, (n % y));
 	}
 	else if (n % y == 0)
 	{
-		printf("%s %d is %d and is 0\n", str, n, (n %y));
+		printf("%s %d is %d and is 0\n", str, n, (n % y));
 	}
 	else if (n % y > 5)
 	{
