@@ -9,6 +9,7 @@
 int print_last_digit(int a)
 {
 	int mod = 10;
+	int result;
 
 	if (a < 0)
 	{
