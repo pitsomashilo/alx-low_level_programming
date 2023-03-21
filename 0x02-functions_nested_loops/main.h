@@ -14,11 +14,4 @@ int add(int, int);
 void print_to_98(int n);
 void ten_hours(void);
 void twenty_hours(void);
-int min_ones = 48;
-int newline = 10;
-int min_tens = 48;
-int zero = 48;
-int colon = 58;
-int hour_ones = 48;
-int hour_tens = 49;
 #endif
