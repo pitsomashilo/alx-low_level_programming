@@ -19,8 +19,8 @@ int print_last_digit(int a)
 	}
 	else if (a == INT_MIN)
 	{
-		a = a * -1;
 		result = a % mod;
+		result = result * -1;
 		_putchar('0' + result);
 	}
 	else
