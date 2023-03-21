@@ -15,12 +15,17 @@ int print_last_digit(int a)
 	{
 		a = a * -1;
 		result = a % mod;
-		_putchar(result + '0');
+		_putchar('0' + result);
 	}
+	else if (a == INT_MIN)
+	{
+		a = a * -1;
+		result = a % mod;
+		_putchar('0' + result);
 	else
 	{
 		result = a % mod;
-		_putchar(result + '0');
+		_putchar('0' + result);
 	}
 	return (result);
 }
