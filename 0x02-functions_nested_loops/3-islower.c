@@ -9,7 +9,7 @@
  * cases.
  * Return: 1 if lowercase, 0 otherwise.
  */
-_int _islower(int c)
+int _islower(int c)
 {
 	int result;
 
