@@ -22,6 +22,5 @@ int print_last_digit(int a)
 		result = a % mod;
 		_putchar(result + '0');
 	}
-	_putchar(result + '0');
 	return (result);
 }
