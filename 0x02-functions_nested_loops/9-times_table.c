@@ -27,6 +27,11 @@ void times_table(void)
 					_prints9(' ', '0', '\n');
 					break;
 				}
+				else if (a == 0)
+				{
+					_prints9('0', ',', ' ');
+					a++;
+				}
 				else
 				{
 					prints_other(' ', '0', ',', ' ');
@@ -45,6 +50,11 @@ void times_table(void)
 					_prints9(' ', result + '0', '\n');
 					break;
 				}
+				else if (a == 0)
+				{
+					_prints9('0', ',', ' ');
+					a++;
+				}
 				else
 				{
 					prints_other(' ', result + '0', ',', ' ');
@@ -62,6 +72,11 @@ void times_table(void)
 					result = a * b;
 					_prints9((result / 10) + '0', (result % 10) + '0', '\n');
 					break;
+				}
+				else if (a == 0)
+				{
+					_prints9('0', ',', ' ');
+					a++;
 				}
 				else
 				{
