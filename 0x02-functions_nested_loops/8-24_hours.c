@@ -26,17 +26,14 @@ void jack_bauer(void)
 		}
 		min_tens++;
 	}
-		
 }
 /**
  * hours - prints every minute from midnight until 23:59
  *
- * @x: character
- * @y: character
- * @z: character
  * @a: character
  * @b: character
  * @c: character
+ * @d: character
  */
 void hours(char a, char b, char c, char d)
 {
