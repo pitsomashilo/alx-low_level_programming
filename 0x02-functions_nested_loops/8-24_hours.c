@@ -4,7 +4,7 @@
  * jack_bauer - prints every minute of the day of Jack Bauer
  */
 void jack_bauer(void);
-void hours(char, char, char, char, char, char);
+void hours(char, char, char, char);
 
 void jack_bauer(void)
 {
@@ -12,52 +12,21 @@ void jack_bauer(void)
 	int newline = '\n';
 	int min_tens = 0;
 	char colon = ':';
-	int zero = 0;
-	int hour_ones = 0;
-	int hour_tens = 1;
+	/*int zero = 0;*/
+	/*int hour_ones = 0;*/
+	/*int hour_tens = 1;*/
 
-
-	while (hour_tens < 3)
+	while (min_tens < 24)
 	{
-		if (hour_ones == 10)
+		min_ones = 0;
+		while (min_ones < 60)
 		{
-			hour_ones = 0;
-			while (hour_ones < 4)
-			{
-				min_tens = 0;
-				while (min_tens < 6)
-				{
-					min_ones = 0;
-					while (min_ones < 10)
-					{
-						hours(hour_tens, hour_ones, colon, min_tens, min_ones, newline);
-						min_ones++;
-					}
-					min_tens++;
-				}
-				hour_ones++;
-			}
-			hour_tens++;
+			hours(min_tens, colon, min_ones, newline);
+			min_ones++;
 		}
-		else if (hour_ones <= 9)
-		{
-			while (hour_ones <= 9)
-			{
-				min_tens = 0;
-				while (min_tens < 6)
-				{
-					min_ones = 0;
-					while (min_ones < 10)
-					{
-						hours(zero, hour_ones, colon, min_tens, min_ones, newline);
-						min_ones++;
-					}
-					min_tens++;
-				}
-				hour_ones++;
-			}
-		}
+		min_tens++;
 	}
+		
 }
 /**
  * hours - prints every minute from midnight until 23:59
@@ -69,12 +38,12 @@ void jack_bauer(void)
  * @b: character
  * @c: character
  */
-void hours(char x, char y, char z, char a, char b, char c)
+void hours(char a, char b, char c, char d)
 {
-	_putchar(x + '0');
-	_putchar(y + '0');
-	_putchar(z);
-	_putchar(a + '0');
-	_putchar(b + '0');
-	_putchar(c);
+	_putchar((a / 10) + '0');
+	_putchar((a % 10) + '0');
+	_putchar(b);
+	_putchar((c / 10) + '0');
+	_putchar((c % 10) + '0');
+	_putchar(d);
 }
