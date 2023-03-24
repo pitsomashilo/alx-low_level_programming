@@ -4,32 +4,32 @@
  * more_numbers - prints the numbers from 0 to 14 ten times.
  *
  * Return: void
+ *
  */
 void more_numbers(void)
 {
-
-	int a = 0;
 	int i;
+	int j;
+	int tens;
+	int ones;
 
-	while (a < 10)
+	j = 0;
+	while (j < 10)
 	{
-		i = 0;
-		while (i < 15)
+		for (i = 0; i < 15; i++)
 		{
+			ones = (i % 10) + '0';
 			if (i > 9)
 			{
-				_putchar((i / 10) + '0');
-				_putchar((i % 10) + '0');
-				i++;
+				tens = (i / 10) + '0';
 			}
-			else
-			{
-				_putchar(i + '0');
-				i++;
-			}
+				if (i < 10)
+				goto next;
+				_putchar(tens);
+next:
+				_putchar(ones);
 		}
-		_putchar('\n');
-		a++;
-
+	_putchar('\n');
+	j++;
 	}
 }
