@@ -19,7 +19,6 @@ void print_rev(char *s)
 		if (len == 0)
 		{
 			_putchar('\n');
-			_putchar('\n');
 			break;
 		}
 		else
