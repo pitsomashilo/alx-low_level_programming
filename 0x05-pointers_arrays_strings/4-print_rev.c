@@ -16,16 +16,9 @@ void print_rev(char *s)
 
 	for (a = len; a > -1; a--)
 	{
-		if (len == 0)
-		{
-			_putchar('\n');
-			break;
-		}
-		else
-		{
-			_putchar(s[a]);
-		}
+		_putchar(s[a]);
 	}
+	_putchar('\n');
 }
 
 /**
