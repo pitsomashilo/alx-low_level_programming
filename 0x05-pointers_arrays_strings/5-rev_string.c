@@ -1,4 +1,5 @@
-
+#include "main.h"
+#include <stdio.h>
 
 /**
  * rev_string - prints a string in reverse
@@ -39,16 +40,9 @@ void rev_string(char *s)
 		}
 	}
 
-	for (j = 0; j <= len; j++)
+	for (j = 0; j < len; j++)
 	{
-		if (new_str[j] == '\0')
-		{
-			break;
-		}
-		else
-		{
-			s[j] = new_str[j];
-		}
+		s[j] = new_str[j];
 	}
 }
 /**
