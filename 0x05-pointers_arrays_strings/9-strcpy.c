@@ -4,6 +4,8 @@
  * _strcpy - copies a string
  * @dest: string destination
  * @src: string to be copied
+ *
+ * Return: pointer to dest
  */
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
