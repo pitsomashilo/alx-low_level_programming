@@ -1,5 +1,4 @@
-#include "main.h"
-#include <stdio.h>
+
 
 /**
  * rev_string - prints a string in reverse
@@ -19,29 +18,31 @@ void rev_string(char *s)
 	len = _strlen(s);
 	i = 0;
 
-	for (a = len; a >= 0; a--)
+	while (i < len)
 	{
-		if (s[a] == '\0')
+		for (a = len; a >= -1; a--)
 		{
-			continue;
-		}
-		else
-		{
-			new_str[i] = s[a];
-			i++;
+			if (s[a] == '\0')
+			{
+				i++;
+				continue;
+			}
+			else if (a == -1)
+			{
+				new_str[i] = '\0';
+				break;
+			}
+			else
+			{
+				new_str[i] = s[a];
+				i++;
+			}
 		}
 	}
 
-	for (j = 0; j <= len; j++)
+	for (j = 0; new_str[j]; j++)
 	{
-		if (new_str[j] == '\0')
-		{
-			continue;
-		}
-		else
-		{
-			s[j] = new_str[j];
-		}
+		s[j] = new_str[j];
 	}
 }
 /**
