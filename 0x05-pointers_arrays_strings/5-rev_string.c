@@ -43,7 +43,6 @@ void rev_string(char *s)
 	{
 		if (new_str[j] == '\0')
 		{
-			s[j] = new_str[j];
 			break;
 		}
 		else
