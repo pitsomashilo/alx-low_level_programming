@@ -13,7 +13,7 @@ void rev_string(char *s)
 	int a;
 	int i;
 	int j;
-	char new_str[100];
+	char new_str[500];
 
 	len = _strlen(s);
 	i = 0;
@@ -24,7 +24,6 @@ void rev_string(char *s)
 		{
 			if (s[a] == '\0')
 			{
-				i++;
 				continue;
 			}
 			else if (a == -1)
@@ -40,9 +39,17 @@ void rev_string(char *s)
 		}
 	}
 
-	for (j = 0; new_str[j]; j++)
+	for (j = 0; j <= len; j++)
 	{
-		s[j] = new_str[j];
+		if (new_str[j] == '\0')
+		{
+			s[j] = new_str[j];
+			break;
+		}
+		else
+		{
+			s[j] = new_str[j];
+		}
 	}
 }
 /**
