@@ -20,6 +20,10 @@ char *cap_string(char *str)
 		{
 			(str[j] >= 97 && str[j] <= 122) ? str[j] = str[j] - 32 : str[j];
 		}
+		else if (str[0] >= 97 && str[0] <= 122)
+		{
+			str[0] = str[0] - 32;
+		}
 	}
 	return (str);
 }
