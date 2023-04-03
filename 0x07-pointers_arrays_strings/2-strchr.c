@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 	int i; /* counter variable */
 	int l; /* length of string */
 	char *result;
-	char *NULL = ((void*)0);
+	char *NULL = ((void *)0);
 
 	l = sizeof(s);
 
