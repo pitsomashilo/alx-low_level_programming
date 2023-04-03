@@ -36,7 +36,7 @@ char *_strstr(char *haystack, char *needle)
 			n = _strcmp(accept, sub);
 			if (n == 0)
 			{
-				result = sub;
+				result = &s[i];
 			}
 			else
 			{
