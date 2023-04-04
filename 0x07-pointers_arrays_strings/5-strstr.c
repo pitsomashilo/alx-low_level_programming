@@ -19,24 +19,24 @@ char *_strstr(char *haystack, char *needle)
 	char *result;
 	char *NULL;
 
-	l = sizeof(s);
+	l = sizeof(haystack);
 	i = 0;
 	NULL = ((void *)0);
 
 	for (i = 0; i < l; i++) /* looping through *s */
 	{
-		if (s[i] != accept[0])
+		if (haystack[i] != needle[0])
 		{
 			continue;
 		}
-		else if (s[i] == accept[0])
+		else if (haystack[i] == needle[0])
 		/* checking if character in s matches charater in accept */
 		{
-			sub = &s[i];
-			n = _strcmp(accept, sub);
+			sub = &haystack[i];
+			n = _strcmp(needle, sub);
 			if (n == 0)
 			{
-				result = &s[i];
+				result = sub;
 			}
 			else
 			{
