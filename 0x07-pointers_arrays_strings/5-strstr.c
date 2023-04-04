@@ -17,11 +17,11 @@ char *_strstr(char *haystack, char *needle)
 	int n; /* store result of _strcmp */
 	char *sub;
 	char *result;
-	char *NULL;
+	char *p;
 
 	l = sizeof(haystack);
 	i = 0;
-	NULL = ((void *)0);
+	p = ((void *)0);
 
 	for (i = 0; i < l; i++) /* looping through *s */
 	{
@@ -45,7 +45,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		else
 		{
-			result = NULL;
+			result = p;
 		}
 	}
 	return (result);
