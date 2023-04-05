@@ -14,6 +14,7 @@ void _puts_recursion(char *s)
 	i = 0;
 	if (s[i] == '\0')
 	{
+		_putchar('\n');
 		return;
 	}
 	recurse_with_num(s, i);
@@ -28,7 +29,7 @@ void recurse_with_num(char *s, int n)
 
 	_putchar(s[n]);
 	n++;
-	if(s[n] == '\0')
+	if (s[n] == '\0')
 	{
 		_putchar('\n');
 		return;
