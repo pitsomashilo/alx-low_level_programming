@@ -14,10 +14,10 @@ int _strlen_recursion(char *s)
 	int i;
 	int r;
 
-	i = 1;
+	i = 0;
 	if (s[i] == '\0')
 	{
-		return (1);
+		return (0);
 	}
 	r = count(s, i);
 	return (r);
