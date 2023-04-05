@@ -18,7 +18,7 @@ void _print_rev_recursion(char *s)
 	{
 		return;
 	}
-	r = count(s, i);
+	r = count(s, i) - 1;
 	recurse_with_num(s, r);
 }
 /**
