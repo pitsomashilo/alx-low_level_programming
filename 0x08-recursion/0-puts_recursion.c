@@ -24,7 +24,7 @@ void recurse_with_num(char *s, int n)
 
 	_putchar(s[n]);
 	n++;
-	if (s[n] == '\0' || s == "")
+	if (s[n] == '\0' || s[n] == "")
 	{
 		_putchar('\n');
 		return;
