@@ -24,14 +24,14 @@ int main(int argc, char *argv[])
 			break;
 		}
 		j = atoi(argv[i]);
-		if (j != 0)
-		{
-			sum = sum + j;
-		}
-		else
+		if (j == 0 && *argv[i] != '0')
 		{
 			printf("Error\n");
 			return (1);
+		}
+		else
+		{
+			sum = sum + j;
 		}
 	}
 	printf("%d\n", sum);
