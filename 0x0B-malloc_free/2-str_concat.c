@@ -24,10 +24,15 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		s1 = "";
+
 	}
 	if (s2 == NULL)
 	{
 		s2 = "";
+	}
+	if (s1 == NULL && s2 == NULL)
+	{
+		new_string = "";
 	}
 	len_one = _strlen(s1);
 	len_two = _strlen(s2);
@@ -40,16 +45,19 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (i = 0; i < len; i++)
 	{
-		new_string[i] = s1[i];
+		if (len_one != 0)
+		{
+			new_string[i] = s1[i];
+		}
 	}
 	for (j = 0; j < len_two; j++)
 	{
-		if (new_string[len_one] == '\0')
+		if (new_string[len_one] == '\0' && len_two != 0)
 		{
 			new_string[len_one] = s2[j];
 			len_one++;
 		}
-		else
+		else if (len_two != 0)
 		{
 			new_string[len_one] = s2[j];
 			len_one++;
