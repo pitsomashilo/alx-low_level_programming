@@ -57,7 +57,7 @@ char *str_concat(char *s1, char *s2)
 			new_string[len_one] = s2[j];
 			len_one++;
 		}
-		else if (len_two != 0 && s[2] != '\0')
+		else if (len_two != 0 && s2[j] != '\0')
 		{
 			new_string[len_one] = s2[j];
 			len_one++;
