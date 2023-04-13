@@ -65,10 +65,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			len_one++;
 		}
 	}
-	if (new_string == NULL)
-	{
-		return (NULL);
-	}
 	return (new_string);
 }
 /**
