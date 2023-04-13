@@ -38,13 +38,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len_one = _strlen(s1);
 	len_two = _strlen(s2);
 
-	len = (n >= len_two) ? len_one + len_two : len_one + n;
-	new_string = malloc(len * sizeof(char) + 1);
+	len = (n >= len_two) ? len_one + len_two + 1 : len_one + n + 1;
+	new_string = malloc(len * sizeof(char));
 	if (new_string == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len_one; i++)
 	/* copies contents of first string into new memory blocks */
 	{
 		if (len_one != 0)
@@ -54,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (j = 0; j < n; j++)
 	{
-		if (new_string[len_one] == '\0' && len_two != 0)
+		if (j == 0 && len_two != 0)
 		{
 			new_string[len_one] = s2[j];
 			len_one++;
