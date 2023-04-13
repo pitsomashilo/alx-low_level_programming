@@ -54,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (j = 0; j < n; j++)
 	{
-		if (j == 0 && len_two != 0)
+		if (new_string[len] == '\0' && len_two != 0)
 		{
 			new_string[len_one] = s2[j];
 			len_one++;
