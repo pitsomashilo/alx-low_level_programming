@@ -52,12 +52,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			new_string[i] = s1[i];
 		}
 	}
-	for (j = 0; j < n; j++)
+	for (j = 0; j < n; i++, j++)
 	{
-		if (new_string[len] == '\0' && len_two != 0)
+		if (len_two != 0)
 		{
-			new_string[len_one] = s2[j];
-			len_one++;
+			new_string[i] = s2[j];
 		}
 	}
 	new_string[len] = '\0';
