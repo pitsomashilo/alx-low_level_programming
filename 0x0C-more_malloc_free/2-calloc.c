@@ -15,44 +15,22 @@ void *_memset(void *s, int b, unsigned int n);
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
-	unsigned int s;
+	char *ptr;
+	unsigned int i, s;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 	s = nmemb * size;
-	if (s >= UINT_MAX)
-	{
-		return (NULL);
-	}
 	ptr = malloc(s);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	ptr = _memset(ptr, 0, sizeof(ptr));
-	return (ptr);
-}
-#include "main.h"
-
-/**
- * _memset - fills the first n bytes of the memeory area pointed to by s with
- * constant byte b
- * @s: address
- * @b: constant byte
- * @n: unsigned integer
- *
- * Return: a pointer to the memory area s
- */
-void *_memset(void *s, int b, unsigned int n)
-{
-	unsigned int i; /* counter variable */
-
-	for (i = 0; i < n; i++)
+	for (i = 0; i < s; i++)
 	{
-		*((int *)s + i) = b;
+		ptr[i] = 0;
 	}
-	return (s);
+	return (ptr);
 }
