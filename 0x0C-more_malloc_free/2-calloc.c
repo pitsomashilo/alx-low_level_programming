@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * _calloc - allocated memory for an array of nmemb elements of size bytes
@@ -15,12 +16,18 @@ void *_memset(void *s, int b, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
+	unsigned int s;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	ptr = malloc(nmemb * size);
+	s = nmemb * size;
+	if (s >= UINT_MAX)
+	{
+		return (NULL);
+	}
+	ptr = malloc(s);
 	if (ptr == NULL)
 	{
 		return (NULL);
