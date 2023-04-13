@@ -59,7 +59,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			new_string[i] = s2[j];
 		}
 	}
-	new_string[len] = '\0';
 	return (new_string);
 }
 /**
