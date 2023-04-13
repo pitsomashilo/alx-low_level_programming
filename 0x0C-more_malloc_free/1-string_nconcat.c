@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len; /* length of new string */
 	unsigned int i; /* counter */
 	unsigned int j; /* counter */
-	char *new_string;
+	char *new_string; 
 
 	if (s1 == NULL)
 	{
@@ -64,6 +64,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			new_string[len_one] = s2[j];
 			len_one++;
 		}
+	}
+	if (new_string == NULL)
+	{
+		return (NULL);
 	}
 	return (new_string);
 }
