@@ -38,15 +38,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len_one = _strlen(s1);
 	len_two = _strlen(s2);
 
-	if (n >= len_two)
-	{
-		len = len_one + len_two;
-	}
-	if (n < len_two)
-	{
-		len = len_one + n;
-	}
-	new_string = malloc((len * sizeof(char)) + 1);
+	len = (n >= len_two) ? len_one + len_two : len_one + n;
+	new_string = malloc(len * sizeof(char) + 1);
 	if (new_string == NULL)
 	{
 		return (NULL);
