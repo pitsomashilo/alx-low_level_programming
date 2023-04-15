@@ -20,6 +20,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	i = atoi(argv[1]);
+	if (i < 0)
+	{
+		printf("%d\n", 0);
+		return (1);
+	}
 	for (j = 0; j < 6; j++)
 	{
 		if (i / arr[j] == 0 && i % arr[j] == i)
