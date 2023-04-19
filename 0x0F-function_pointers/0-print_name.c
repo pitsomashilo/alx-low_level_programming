@@ -9,13 +9,7 @@ void print_name(char *name, void (*f)(char *))
 {
 	int i;
 
-	if ((*f) == NULL)
-	{
-		for (i = 0; name[i] != '\0'; i++)
-			_putchar(name[i]);
-		_putchar('\n');
-	}
-	else if (name == NULL)
+	if ((*f) == NULL || name == NULL)
 	{
 		exit(0);
 	}
