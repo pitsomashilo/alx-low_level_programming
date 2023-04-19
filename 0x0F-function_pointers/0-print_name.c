@@ -7,14 +7,5 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	int i;
-
-	if ((*f) == NULL || name == NULL)
-	{
-		exit(0);
-	}
-	else
-	{
-		(*f)(name);
-	}
+	(f)(name);
 }
