@@ -34,6 +34,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%d%s", num, separator);
 	}
+	va_end(numbers);
 }
 /**
  * _strlen - returns the length of a string
