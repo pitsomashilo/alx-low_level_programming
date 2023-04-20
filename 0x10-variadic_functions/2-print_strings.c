@@ -24,15 +24,30 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		str = va_arg(strings, char *);
-		if (i == (n - 1))
+		if (str != NULL)
 		{
-			printf("%s\n", str);
-			break;
+			if (i == (n - 1))
+			{
+				printf("%s\n", str);
+				break;
+			}
+			if (separator == NULL || _strlen(separator) == 0)
+				printf("%s", str);
+			else
+				printf("%s%s", str, separator);
 		}
-		if (separator == NULL || _strlen(separator) == 0)
-			printf("%s", str);
 		else
-			printf("%s%s", str, separator);
+		{
+			if (i == (n - 1))
+			{
+				printf("%p\n", str);
+				break;
+			}
+			if (separator == NULL || _strlen(separator) == 0)
+				printf("%p", str);
+			else
+				printf("%p%s", str, separator);
+		}
 	}
 	va_end(strings);
 }
