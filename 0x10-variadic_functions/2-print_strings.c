@@ -13,19 +13,21 @@ int _strlen(const char *s);
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
+	int i;
+	int a;
 	char *str;
 	va_list strings;
 
+	a = (int) n;
 	va_start(strings, n);
-	if (n == 0)
+	if (a <= 0)
 		exit(0);
-	for (i = 0; i < n; i++)
+	for (i = 0; i < a; i++)
 	{
 		str = va_arg(strings, char *);
 		if (str != NULL)
 		{
-			if (i == (n - 1))
+			if (i == (a - 1))
 			{
 				printf("%s\n", str);
 				break;
@@ -37,7 +39,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-			if (i == (n - 1))
+			if (i == (a - 1))
 			{
 				printf("%p\n", str);
 				break;
