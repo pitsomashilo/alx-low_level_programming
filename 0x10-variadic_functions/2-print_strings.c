@@ -17,7 +17,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *str;
 	va_list strings;
 
-	str = "skip";
 	va_start(strings, n);
 	if (n == 0)
 		exit(0);
