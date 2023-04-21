@@ -21,7 +21,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	a = (int) n;
 	va_start(strings, n);
 	if (a <= 0)
+	{
+		printf("\n");
 		exit(0);
+	}
 	for (i = 0; i < a; i++)
 	{
 		str = va_arg(strings, char *);
